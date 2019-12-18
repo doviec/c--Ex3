@@ -54,14 +54,11 @@ int substring (char* string, char* word){
 int similar (char* string, char* word, int n){
       
     if (getLength(word) > getLength(string)){
-     //printf("1.1");
             return 0;
     }
     if ((getLength(string) - n - 2) > getLength(word)){
-      // printf("1.2\n");
         return 0;
     }
-   
     int index_word = 0;
     int index_string = 0;
     while (*(string +index_string) != '\0'){
@@ -75,12 +72,9 @@ int similar (char* string, char* word, int n){
          if (n < 0 ){
             return 0;
         }
-    }
-       
-           
+    }      
     if (index_word == getLength(word)){
-        
-            return 1;            
+        return 1;            
     }else{
         return 0;
     }
@@ -95,7 +89,7 @@ void similar_words(char word []){
                  
                  check_word[index] = '\0'; 
                  index = 0;  
-                 //printf(" word is %s\n",check_word);                        
+                            
                  if (similar(check_word, word,N) == 1){
                     printf("%s \n",check_word);
                   }
