@@ -9,7 +9,7 @@
         while ((letter = getc(stdin)) != EOF){
             index = 1;
             line[0] = letter;
-            while ((letter = getc(stdin)) != '\n' && letter != '0'){
+            while ((letter = getc(stdin)) != '\n' && letter > 0){
 
                 line[index] = letter;
                 index++;
