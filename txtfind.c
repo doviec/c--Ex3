@@ -32,7 +32,7 @@ int getLength(char* str){       //get Length
     }
     return count;
 }
-int substring (char* string, char* word){
+int substring (char* string, char* word){   //checks if string contains word
    
    int length_word = getLength(word);
    int index_string = 0; 
@@ -51,7 +51,7 @@ int substring (char* string, char* word){
     }
    return 0;
 }
-int similar (char* string, char* word, int n){
+int similar (char* string, char* word, int n){   //checks if string contains word with a deviation of N
       
     if (getLength(word) > getLength(string)){
             return 0;
@@ -79,7 +79,7 @@ int similar (char* string, char* word, int n){
         return 0;
     }
 }
-void similar_words(char word []){
+void similar_words(char word []){    
     char letter;
     char check_word[WORD] = {0};
     int index=0;

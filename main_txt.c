@@ -24,6 +24,9 @@ int main()
        letter = getc(stdin);
         
         similar_words(word);
-    }
+    }else{
+        printf("Wrong letter");
+        }
+
     return 0;
 }
